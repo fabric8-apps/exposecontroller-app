@@ -61,7 +61,7 @@ def updateInitService(releaseVersion){
       sh "git checkout -b versionUpdate${uid}"
 
       sh "echo ${releaseVersion} > EXPOSCONTROLLER_VERSION"
-      def message = "Update fabric8-platform version to ${releaseVersion}"
+      def message = "Update exposecontroller version to ${releaseVersion}"
       sh "git commit -a -m \"${message}\""
       sh "git push origin versionUpdate${uid}"
 
