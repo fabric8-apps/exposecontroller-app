@@ -36,10 +36,12 @@ def updateDownstreamDependencies(stagedProject) {
   pushPomPropertyChangePR {
     propertyName = 'exposecontroller.version'
     projects = [
-            'fabric8io/fabric8-platform'
+            'fabric8io/fabric8-platform',
+            'fabric8-services/fabric8-tenant-jenkins'
     ]
     version = stagedProject[1]
   }
+  updateInitService(stagedProject[1])
 }
 
 def updateInitService(releaseVersion){
