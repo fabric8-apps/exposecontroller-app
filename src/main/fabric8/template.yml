@@ -4,3 +4,5 @@ parameters:
 - name: NODE_IP
 - name: DOMAIN
 - name: EXPOSER
+- name: HTTP
+- name: TLS_ACME
